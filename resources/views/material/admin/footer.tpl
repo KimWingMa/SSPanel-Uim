@@ -1,12 +1,12 @@
 <footer class="ui-footer">
     <div class="container">
-        &copy;{date("Y")} {$config["appName"]} | Powered by <a href="/staff">SSPANEL</a>
-        {if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
+        &copy;{date("Y")} {$config['appName']} | Powered by <a href="/staff">SSPANEL</a>
+        {if $config['enable_analytics_code'] === true}{include file='analytics.tpl'}{/if}
     </div>
 </footer>
 
 <!-- js -->
-{if $config["sspanelAnalysis"] == 'true'}
+{if $config['sspanelAnalysis'] === true}
     <!-- Google Analytics -->
     <script>
         window.ga = window.ga || function () {
@@ -40,8 +40,6 @@
 <script src="//cdn.jsdelivr.net/gh/DataTables/DataTables@1.10.19/media/js/dataTables.material.min.js"></script>
 <script src="/theme/material/js/base.min.js"></script>
 <script src="/theme/material/js/project.min.js"></script>
-<script type="text/javascript" color="0,217,255" opacity="0.5" count="49"
-        src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1.0.1"></script>
 
 </body>
 </html>

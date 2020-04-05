@@ -12,13 +12,10 @@
 <div class="card-action">
     <div class="card-action-btn pull-left">
         <button class="btn btn-flat waves-attach" id="bitpaySubmit" name="type" onclick="bitpay('Crypto')">
-            <img src="https://bitpay.dev/img/mpay-zh.png" height="50px"/>
+            <img src="/images/crypto.jpg" height="50px"/>
         </button>
     </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1"></script>
-<script src="/assets/js/qrcode.min.js"></script>
 
 <script>
     var pid = 0;
@@ -59,7 +56,7 @@
         });
     }
 
-    function f() {
+    function bitpayf() {
         $.ajax({
             type: "POST",
             url: "/payments/bitpay/status",
@@ -79,6 +76,6 @@
                 //console.log(jqXHR);
             }
         });
-        tid = setTimeout(f, 1000); //循环调用触发setTimeout
+        tid = setTimeout(bitpayf, 1000); //循环调用触发setTimeout
     }
 </script>
